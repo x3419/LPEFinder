@@ -3,7 +3,7 @@ This project aims to build basic pattern matching around common vulnerable indic
 1) What potentially vulnerable behavior looks like in procmon
 2) Where to look for this behavior
 
-My hope is that once I understand and can check for more high fidelity indicators that I'll be able to add fuzzing for something like RPC servers. Then we can fuzz against everything and and we'll know how to cause interesting behavior.
+My hope is that once I understand and can check for more high fidelity indicators that I'll be able to add fuzzing for something like RPC servers. Then we can fuzz against everything and we'll know how to cause interesting behavior.
 
 The default procmon filter being used in this project is:
 
