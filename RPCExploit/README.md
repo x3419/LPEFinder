@@ -8,6 +8,7 @@ My hope is that once I understand and can check for more high fidelity indicator
 The default procmon filter being used in this project is:
 
 `Integrity|is|medium|Exclude` - We want SYSTEM
+
 `Detail|contains|Impersonating: desktop|Exclude` - My user is in the desktop-asdf group so we don't care about those
 
 ## Checks
