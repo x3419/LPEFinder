@@ -1,5 +1,5 @@
 ﻿# Vulnerability Enumerator
-This project aims to build basic pattern matching around common vulnerable indicators that can be identified using Procmon. I'm a total noob at actually hunting for this stuff so I wanted a way to get very specific about:
+This project aims to build basic pattern matching around common vulnerable indicators that can be identified using Procmon. I'm a total noob at hunting for LPEs so I wanted a way to get very specific about:
 1) What potentially vulnerable behavior looks like in procmon
 2) Where to look for this behavior
 
