@@ -17,7 +17,7 @@ http://sandboxescaper.blogspot.com/2019/12/chasing-polar-bears-part-one.html
 This blog goes through an example of a vulnerable indicator that I have implemented a check for. The gist is that there's an msi file in C:\Windows\Installer that is authored by VMWare. 
 When my code is kicked off, `msiexec /fa C:\Windows\Installer\whatever.msi`will run and procmon will record its behavior. Those results will then be saved, converted into csv, and then checked against the following logic:
 
-`if there's a CreateFile NAME NOT FOUND and CreateFile with delete permission and SetRenameInformationFile near each other for the same path then this is a potential file modify vuln`
+`if there's a CreateFile NAME NOT FOUND and CreateFile with delete permission and SetRenameInformationFile near each other for the same path and the user has write access to the folder then this is a potential file modify vuln`
 
 Running that results in many potential file modify vulns being identified, including the one chosen in that blog post: *stop-listener.bat,* indicating that my algorithm matches as expected. This can be confirmed by checking other results against their respective pmf file.
 
