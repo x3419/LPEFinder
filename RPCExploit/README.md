@@ -5,7 +5,7 @@ This project aims to build basic pattern matching around common vulnerable indic
 
 The default procmon filter being used in this project is:
 
-`Integrity|is|medium|Exclude` - We want SYSTEM
+`Integrity|is|medium|Exclude` - We want high or system
 
 `Detail|contains|Impersonating: desktop|Exclude` - My user is in the desktop-asdf group so we don't care about those
 
@@ -22,9 +22,10 @@ When my code is kicked off, `msiexec /fa C:\Windows\Installer\whatever.msi`will 
 Running that results in many potential file modify vulns being identified including the one chosen in that blog post, *stop-listener.bat,* as we would expect.
 ### 2) DLL Hijacking
 As detailed in EternalBrett's Goverlan Reach Agent EoP, I've implemented a check for potential dll hijacking vulnerabilities using the following logic:
+
 `if BUILTIN\Users has full control over a folder in which there is a CreateFile SUCCESS and there is also a CreateFile NAME NOT FOUND followed by a Load Image s.t. they have the same filename but different paths then this is a potential dll hijacking vuln`
 
-## Adding fuzzing
+## Adding fuzzing and automation
 https://googleprojectzero.blogspot.com/2019/12/calling-local-windows-rpc-servers-from.html
 
 James Forshaw recently released a library that can be used to call local RPC servers from .NET. This seems like a cool idea because you can do crazy stuff in .NET like reflection. Basically his blog post walks you through generating RPC server C# definitions that you can import and use. At some point I want to see if I can import _all_ RPC servers into the visual studio project, then use reflection to invoke all "fuzzable" functions (that take params like string, int, etc).
