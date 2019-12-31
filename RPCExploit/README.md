@@ -19,7 +19,7 @@ When my code is kicked off, `msiexec /fa C:\Windows\Installer\whatever.msi`will 
 
 `if there's a CreateFile NAME NOT FOUND and CreateFile with delete permission and SetRenameInformationFile near each other for the same path and the user has write access to the folder then this is a potential file modify vuln`
 
-Running that results in many potential file modify vulns being identified, including the one chosen in that blog post: *stop-listener.bat,* indicating that my algorithm matches as expected. This can be confirmed by checking other results against their respective pmf file.
+Running that results in many potential file modify vulns being identified, including the one chosen in that blog post: *stop-listener.bat,* as we would expect.
 
 ## Adding fuzzing
 https://googleprojectzero.blogspot.com/2019/12/calling-local-windows-rpc-servers-from.html
