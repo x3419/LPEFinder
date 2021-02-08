@@ -32,7 +32,7 @@ When the code runs, procmon will record the behavior caused by the command line.
 
 Running that results in many potential file write vulns being identified including the one chosen in that blog post, *stop-listener.bat,* as we would expect.
 
-![alt text](fileModify.PNG "Title")
+![alt text](RPCExploit/fileModify.PNG "Title")
 
 Now that we have findings, we can open the respective csv/pmf files to investigate what exactly was detected by Penrose.
 
@@ -50,7 +50,7 @@ Then lets replace the "make noise" code with  with:
 
 When we kick that off, we're greeted with:
 
-![alt text](arbitraryFileWrite.png "Title")
+![alt text](RPCExploit/arbitraryFileWrite.png "Title")
 
 Indicating that the detection does work as expected.
 
@@ -69,7 +69,7 @@ Additionally:
 `if there's ever a Load Image to a directory BUILTIN\Users has full control of then that's a vulnerability`
 
 ## Example
-![alt text](mainExample.png "Title")
+![alt text](RPCExploit/mainExample.png "Title")
 
 This is an example implementation of main which showcases how simple it is to set up this tool. 
 
