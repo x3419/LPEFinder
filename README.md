@@ -38,7 +38,7 @@ Now that we have findings, we can open the respective csv/pmf files to investiga
 
 
 ### 2) Arbitrary File Write
-As detailed in EternalBrett & Peyton's Goverlan Reach Agent EoP, I've implemented a check for arbitrary file write vulnerabilities using the following logic:
+I've implemented a check for arbitrary file write vulnerabilities using the following logic:
 
 `if BUILTIN\Users has full control over a folder in which there is a CreateFile SUCCESS to a file then this can be leveraged as an arbitrary file write using a hard link`
 
